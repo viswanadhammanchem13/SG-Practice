@@ -11,12 +11,5 @@ resource "aws_security_group""main"{
   )
 }
 
-resource "aws_security_group_rule" "sg_rule" {
-  type              = "ingress"
-  from_port         =22
-  to_port           = 22
-  protocol          = "tcp"
-  cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = module.security_group.sg-id
-}
+
   
